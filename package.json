@@ -1,0 +1,21 @@
+{
+  "name": "geomemories",
+  "version": "1.0.0",
+  "description": "App for placing custom markers on a map.",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "edit-json-file": "^1.2.1",
+    "express": "^4.16.4",
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security",
+    "websocket": "^1.0.28"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Mitchell Hornsby",
+  "license": "ISC"
+}

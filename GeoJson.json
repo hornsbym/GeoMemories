@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    20,
+                    20
+                ]
+            },
+            "properties": {
+                "title": "<h1>Test</h1>",
+                "content": "<p>This is a test memory.</p>",
+                "icon": "http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png"
+            }
+        }
+    ]
+}

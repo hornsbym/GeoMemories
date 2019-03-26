@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>GeoMemories</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="map"></div>
+        <button id="newMemory">New memory</button>
+        <div id="memoryForm">
+            <div>
+                <label for="memLat">Latitude</label>
+                <input name="memLat" type="number" id="memLat">
+                <label for="memLong">Longitude</label>
+                <input name="memLong" type="number" id="memLong">
+            </div>
+            <label for="memTitle">Title</label>
+            <div>
+                <input id="memTitle" name="memTitle" type="text">
+            </div>
+            <label for="memContent">Contents</label>
+            <div>
+                <textarea id="memContent" name="memContent" type="text"></textarea>
+            </div>
+            <label for="memIcon">Icon</label>
+            <select name="memIcon" id="memIcon">
+                    <option value="http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png">Pushpin</option>
+            </select>
+            <div>
+                <button id="createButton">Create</button>
+                <button id="cancelButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="getMemory.js"></script>
+    <script src="mapFunctions.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtnmyvriUizCZiWcyMdqc_Fqn1Hl4rFs0&amp;callback=initMap" async="" defer=""></script>
+</body>
+
+</html>

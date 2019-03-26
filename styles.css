@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+div#memoryForm {
+    background-color: white;
+    width: fit-content;
+    padding: 1em;
+    display: none;
+    position: absolute;
+    top: 6%;
+    left: 33%;
+}
+
+button#newMemory {
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 48%;
+}
+
+div#wrapper {
+    min-height: 100%;
+    background-color: lightblue;
+} 
+
+div#map {
+    height: 100vh;
+}
