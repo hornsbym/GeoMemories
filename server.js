@@ -3,17 +3,16 @@ const bodyParser = require('body-parser');
 const cors = require("cors")
 const fs = require("fs");
 const app = express();
+
+require("dotenv").config();
+
 app.use(express.static(__dirname));
 app.use(bodyParser.json())
-
-const corsOptions = {
-    origin:"http://localhost:5500"
-}
 
 //allow OPTIONS on all resources
 app.options('*', cors())
 
-const port = 3000;
+const port = 3501;
 
 app.post("/", (req, res) => {
     var feature = req.body;
