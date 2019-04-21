@@ -6,13 +6,10 @@ const app = express();
 
 require("dotenv").config();
 
-app.use(express.static(__dirname));
 app.use(bodyParser.json())
+app.use(cors())
 
-//allow OPTIONS on all resources
-app.options('*', cors())
-
-const port = 3501;
+const port = 3000;
 
 app.post("/", (req, res) => {
     var feature = req.body;
@@ -34,6 +31,6 @@ app.post("/", (req, res) => {
     res.send("recieved")
 })
 
-var server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
 })

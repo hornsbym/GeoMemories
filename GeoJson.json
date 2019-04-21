@@ -1,1 +1,20 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[11,13]},"properties":{"title":"<h1>Mitchell</h1>","content":"<p>Hornsby</p>","icon":"http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[13,9]},"properties":{"title":"<h1>Test 1</h1>","content":"<p>Mitchell Hornsby</p>","icon":"http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png"}}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.887382,
+                    33.8904246
+                ]
+            },
+            "properties": {
+                "title": "<h1>Mandie visited!</h1>",
+                "content": "<p>Today, Mandie helped me look for apartments.</p>",
+                "icon": "http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png"
+            }
+        }
+    ]
+}
