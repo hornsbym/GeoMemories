@@ -9,7 +9,7 @@ require("dotenv").config();
 app.use(bodyParser.json())
 app.use(cors())
 
-const port = 3000;
+const port = 9999;
 
 app.post("/", (req, res) => {
     var feature = req.body;

@@ -25,7 +25,7 @@ var getData = function(){
         }
       }
 
-      var url = "http://localhost:3000";
+      var url = "http://157.230.66.219:9999";
       var data = JSON.stringify(feature);
 
       console.log(data)
