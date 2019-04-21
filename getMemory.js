@@ -25,7 +25,7 @@ var getData = function(){
         }
       }
 
-      var url = "https://157.230.66.219:9999";
+      var url = "https://142.93.118.50:9999";
       var data = JSON.stringify(feature);
 
       console.log(data)
