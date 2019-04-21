@@ -1,3 +1,6 @@
 node_modules/*
 geoSkeleton.json
 .env
+server.cert
+server.key
+.rnd
