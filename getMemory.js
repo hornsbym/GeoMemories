@@ -31,6 +31,7 @@ var getData = function(){
       console.log(data)
 
       fetch(url, {
+        credentials: 'include', 
         method: "post",
         mode: "cors",
         headers: {
