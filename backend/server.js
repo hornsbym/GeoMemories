@@ -30,7 +30,6 @@ app.post("/", (req, res) => {
     res.send("recieved")
 })
 
-
 https.createServer({
     key: fs.readFileSync("server.key"),
     cert: fs.readFileSync("server.cert")
