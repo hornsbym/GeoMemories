@@ -1,4 +1,3 @@
-const https = require("https");
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require("cors")
@@ -30,10 +29,7 @@ app.post("/", (req, res) => {
     res.send("recieved")
 })
 
-https.createServer({
-    key: fs.readFileSync("server.key"),
-    cert: fs.readFileSync("server.cert")
-}, app)
-.listen(port, () => {
+
+app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
 })
