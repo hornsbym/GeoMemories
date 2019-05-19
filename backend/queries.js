@@ -13,18 +13,18 @@ const getUser = (request, response) => {
         if (error) {
             throw error;
         } else {
-            response.status(200).json(results.rows)
+            response.status(200).json(results.rows);
         }
     })
 }
 
 const getMemoriesForUser = (request, response) => {
     var uname = request.query.username;
-    pool.query(`SELECT lat, long, title, descr FROM users, memory_info WHERE username='${uname}'`, (error, results) => {
+    pool.query(`SELECT lat, long, title, descr FROM memory_info WHERE user_id=(SELECT user_id FROM users WHERE username='${uname}')`, (error, results) => {
         if (error) {
             throw error;
         } else {
-            response.status(200).json(results.rows)
+            response.status(200).json(results.rows);
         }
     })
 }
@@ -35,13 +35,13 @@ const addMemoryForUser = (request, response) => {
     var lat  = request.query.latitude;
     var long = request.query.longitude;
     var desc = request.query.description;
-
+ 
     pool.query(`INSERT INTO memory_info (lat, long, title, descr, user_id) 
-    VALUES (${lat}, ${long}, '${title}', '${desc}', (SELECT user_id FROM users WHERE username='${user_id}'))`, (error, results) => {
+    VALUES (${lat}, ${long}, '${title}', '${desc}', (SELECT user_id FROM users WHERE username='${uname}'))`, (error, results) => {
         if (error) {
             throw error;
         } else {
-            response.status(200)
+            response.status(200).json(results);
         }
     })
 }
