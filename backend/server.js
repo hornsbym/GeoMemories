@@ -34,7 +34,8 @@ app.post("/", (req, res) => {
     res.send("recieved")
 })
 
-app.get('/queryDB', db.getUser)
+app.get('/getUserInfo', db.getUser);
+app.get('/getMemoriesForUser', db.getMemoriesForUser);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)

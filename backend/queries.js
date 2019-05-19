@@ -3,7 +3,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'postgres',
-    password: '',
+    password: '$Chloe(1226)',
     port: 5432
 })
 
@@ -19,7 +19,18 @@ const getUser = (request, response) => {
 }
 
 // const getMemoriesForUser = (request, response) => 
+const getMemoriesForUser = (request, response) => {
+    uname = request.query.username;
+    pool.query(`SELECT lat, long, title, descr FROM users, memory_info WHERE username='${uname}'`, (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.status(200).json(results.rows)
+        }
+    })
+}
 
 module.exports = {
-    getUser
+    getUser,
+    getMemoriesForUser
 }
