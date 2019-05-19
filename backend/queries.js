@@ -48,5 +48,6 @@ const addMemoryForUser = (request, response) => {
 
 module.exports = {
     getUser,
-    getMemoriesForUser
+    getMemoriesForUser,
+    addMemoryForUser
 }

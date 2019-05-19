@@ -36,6 +36,7 @@ app.post("/", (req, res) => {
 
 app.get('/getUserInfo', db.getUser);
 app.get('/getMemoriesForUser', db.getMemoriesForUser);
+app.put('/addMemoryForUser', db.addMemoryForUser);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
