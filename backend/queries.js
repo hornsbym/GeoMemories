@@ -9,7 +9,7 @@ const pool = new Pool({
 
 const getUser = (request, response) => {
     uname = request.query.username;
-    pool.query(`SELECT * FROM users WHERE username=${uname}`, (error, results) => {
+    pool.query(`SELECT * FROM users WHERE username='${uname}'`, (error, results) => {
         if (error) {
             throw error;
         } else {
@@ -18,7 +18,7 @@ const getUser = (request, response) => {
     })
 }
 
-const getMemoriesForUser = (request, response) => 
+// const getMemoriesForUser = (request, response) => 
 
 module.exports = {
     getUser
