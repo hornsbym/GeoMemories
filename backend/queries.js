@@ -2,13 +2,14 @@ const Pool = require('pg').Pool;
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    database: 'users',
-    password: '$Chloe(1226)',
+    database: 'postgres',
+    password: '',
     port: 5432
 })
 
 const getUser = (request, response) => {
-    pool.query("SELECT * FROM users WHERE user_id=1", (error, results) => {
+    uname = request.query.username;
+    pool.query(`SELECT * FROM users WHERE username=${uname}`, (error, results) => {
         if (error) {
             throw error;
         } else {
@@ -16,6 +17,8 @@ const getUser = (request, response) => {
         }
     })
 }
+
+const getMemoriesForUser = (request, response) => 
 
 module.exports = {
     getUser
