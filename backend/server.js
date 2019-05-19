@@ -1,10 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require("cors")
+const db = require("./queries");
+const cors = require("cors");
 const fs = require("fs");
 const app = express();
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true,
+})
+)
 app.use(cors())
 
 const port = 9999;
@@ -29,6 +34,7 @@ app.post("/", (req, res) => {
     res.send("recieved")
 })
 
+app.get('/queryDB', db.getUser)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
